@@ -9,7 +9,7 @@ import com.aselsis.aselmanager.service.ProductService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/product")
+@RequestMapping("/product")
 @CrossOrigin
 public class ProductController {
     private final ProductService productService;

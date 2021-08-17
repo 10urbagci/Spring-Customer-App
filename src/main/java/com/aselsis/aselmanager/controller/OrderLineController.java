@@ -9,7 +9,7 @@ import com.aselsis.aselmanager.service.ProductService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/orderline")
+@RequestMapping("/orderline")
 @CrossOrigin
 public class OrderLineController {
     private final OrderLineService orderLineService;
