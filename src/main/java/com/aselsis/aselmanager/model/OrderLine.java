@@ -18,7 +18,8 @@ public class OrderLine {
 
     private Double cost;
 
-    public OrderLine(){
+    public OrderLine() {
 
     }
+
 }
