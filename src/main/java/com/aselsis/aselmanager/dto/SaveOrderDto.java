@@ -5,6 +5,7 @@ import lombok.Data;
 
 @Data
 public class SaveOrderDto {
-    private Integer totalPrice;
+
+    private Double totalPrice;
 
 }

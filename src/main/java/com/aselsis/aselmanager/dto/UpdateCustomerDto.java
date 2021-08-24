@@ -3,7 +3,7 @@ package com.aselsis.aselmanager.dto;
 import lombok.Data;
 
 @Data
-public class SaveCustomerDto {
+public class UpdateCustomerDto {
 
     private String name;
 
