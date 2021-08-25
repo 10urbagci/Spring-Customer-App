@@ -16,10 +16,10 @@ public class Order {
     @ManyToOne
     private Customer customer;
 
-    private Integer totalPrice;
+    private Double totalPrice;
 
     @OneToMany
-    private List<OrderLine> lines;
+    private List<OrderLine> orderLineList;
 
     public Order(){
     }

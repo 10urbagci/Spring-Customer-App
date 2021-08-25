@@ -53,10 +53,13 @@ public class ProductServiceImpl implements ProductService {
         return product;
     }
 
-
-
-
+    @Override
+    public void deleteById(Integer id) {
+        productRepository.deleteById(id);
     }
+
+
+}
 
 
 

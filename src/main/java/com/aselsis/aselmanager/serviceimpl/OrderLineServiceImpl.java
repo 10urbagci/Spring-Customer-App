@@ -1,7 +1,6 @@
 package com.aselsis.aselmanager.serviceimpl;
 
 import com.aselsis.aselmanager.dto.UpdateOrderLineDto;
-import com.aselsis.aselmanager.model.Order;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.aselsis.aselmanager.dto.SaveOrderLineDto;
@@ -38,7 +37,7 @@ public class OrderLineServiceImpl implements OrderLineService {
 
         double totalCost = product.get().getUnitPrice()*saveOrderLineDto.getQuantity();
 
-        orderLine.setCost(totalCost);
+        orderLine.setTotalCost(totalCost);
 
         orderLine = orderLineRepository.save(orderLine);
 
@@ -56,7 +55,7 @@ public class OrderLineServiceImpl implements OrderLineService {
 
         OrderLine orderLine = optionalOrderLine.get();
 
-        orderLine.setCost(updateOrderLineDto.getCost());
+        orderLine.setTotalCost(updateOrderLineDto.getCost());
 
         orderLine.setQuantity(updateOrderLineDto.getQuantity());
 
@@ -64,6 +63,11 @@ public class OrderLineServiceImpl implements OrderLineService {
 
         return orderLine;
 
+    }
+
+    @Override
+    public void deleteById(Integer id) {
+        orderLineRepository.deleteById(id);
     }
 
 

@@ -38,7 +38,7 @@ public class OrderLineController {
     }
     @DeleteMapping("/orderline/{id}")
     public void deleteOrderLine(@PathVariable Integer id){
-        orderLineRepository.deleteById(id);
+        orderLineService.deleteById(id);
     }
     @GetMapping("/orderline/{id}")
     public List<OrderLine> findAll(@PathVariable Integer id){

@@ -12,4 +12,6 @@ public interface OrderLineService {
     List<OrderLine> findAll();
 
     OrderLine updateOrderLine(Integer orderLineId, UpdateOrderLineDto updateOrderLineDto);
+
+    void deleteById(Integer id);
 }

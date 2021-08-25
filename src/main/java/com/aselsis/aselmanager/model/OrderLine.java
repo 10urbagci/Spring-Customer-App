@@ -16,7 +16,7 @@ public class OrderLine {
     @ManyToOne
     private Product product;
 
-    private Double cost;
+    private Double totalCost;
 
     public OrderLine() {
 

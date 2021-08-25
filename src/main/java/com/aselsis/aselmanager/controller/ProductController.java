@@ -37,7 +37,7 @@ public class ProductController {
     }
     @DeleteMapping("/product/{id}")
     public void deleteProduct(@PathVariable Integer id){
-        productRepository.deleteById(id);
+        productService.deleteById(id);
     }
     @GetMapping("/product/{id}")
     public List<Product> findAll(@PathVariable Integer id){

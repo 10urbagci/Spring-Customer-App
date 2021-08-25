@@ -42,7 +42,7 @@ public class CustomerController {
 
     @DeleteMapping("/customer/{id}")
     public void deleteCustomer(@PathVariable Integer id){
-        customerRepository.deleteById(id);
+        customerService.deleteById(id);
     }
     @GetMapping("/customer/{id}")
     public List<Customer> findAll(@PathVariable Integer id){
