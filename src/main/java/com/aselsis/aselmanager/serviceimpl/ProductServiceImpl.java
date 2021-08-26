@@ -1,13 +1,12 @@
 package com.aselsis.aselmanager.serviceimpl;
 
-import com.aselsis.aselmanager.dto.UpdateProductDto;
-import org.springframework.stereotype.Service;
 import com.aselsis.aselmanager.dto.SaveProductDto;
+import com.aselsis.aselmanager.dto.UpdateProductDto;
 import com.aselsis.aselmanager.model.Product;
 import com.aselsis.aselmanager.repository.ProductRepository;
 import com.aselsis.aselmanager.service.ProductService;
+import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -56,6 +55,12 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public void deleteById(Integer id) {
         productRepository.deleteById(id);
+    }
+    @Override
+    public Product findById(Integer id){
+       Optional<Product> opProduct = productRepository.findById(id);
+
+       return opProduct.get();
     }
 
 

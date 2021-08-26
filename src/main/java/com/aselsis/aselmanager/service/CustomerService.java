@@ -4,7 +4,6 @@ import com.aselsis.aselmanager.dto.SaveCustomerDto;
 import com.aselsis.aselmanager.dto.UpdateCustomerDto;
 import com.aselsis.aselmanager.model.Customer;
 
-
 import java.util.List;
 
 public interface CustomerService {
@@ -16,6 +15,8 @@ public interface CustomerService {
     Customer updateCustomer(Integer customerId, UpdateCustomerDto updateCustomerDto);
 
     void deleteById(Integer id);
+
+    Customer findById(Integer id);
 
 
 }

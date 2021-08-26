@@ -14,4 +14,6 @@ public interface OrderLineService {
     OrderLine updateOrderLine(Integer orderLineId, UpdateOrderLineDto updateOrderLineDto);
 
     void deleteById(Integer id);
+
+    OrderLine findById(Integer id);
 }

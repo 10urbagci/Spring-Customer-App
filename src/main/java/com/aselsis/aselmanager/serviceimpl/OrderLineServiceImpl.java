@@ -69,6 +69,12 @@ public class OrderLineServiceImpl implements OrderLineService {
     public void deleteById(Integer id) {
         orderLineRepository.deleteById(id);
     }
+    @Override
+    public OrderLine findById(Integer id){
+        Optional<OrderLine> opOrderLine = orderLineRepository.findById(id);
+
+        return opOrderLine.get();
+    }
 
 
 }

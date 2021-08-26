@@ -81,6 +81,12 @@ public class OrderServiceImpl implements OrderService {
     public void deleteById(Integer id) {
         orderRepository.deleteById(id);
     }
+    @Override
+    public Order findById(Integer id){
+       Optional<Order> opOrder = orderRepository.findById(id);
+
+       return opOrder.get();
+    }
 
 
 }

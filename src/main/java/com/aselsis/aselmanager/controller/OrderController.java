@@ -3,7 +3,6 @@ package com.aselsis.aselmanager.controller;
 import com.aselsis.aselmanager.dto.SaveOrderRequestDto;
 import com.aselsis.aselmanager.dto.UpdateOrderDto;
 import com.aselsis.aselmanager.model.Order;
-import com.aselsis.aselmanager.repository.OrderRepository;
 import com.aselsis.aselmanager.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -33,18 +32,18 @@ public class OrderController {
         return orderService.saveOrder(saveOrderRequestDto);
     }
 
-    @PutMapping("/order/{id}")
+    @PutMapping("/{id}")
     public Order replaceOrder(@RequestBody UpdateOrderDto orderDto, @PathVariable Integer id) {
         return orderService.updateOrder(id, orderDto);
     }
 
-    @DeleteMapping("/order/{id}")
+    @DeleteMapping("/{id}")
     public void deleteController(@PathVariable Integer id) {
         orderService.deleteById(id);
     }
 
-    @GetMapping("/order/{id}\"")
-    public List<Order> findAll(@PathVariable Integer id) {
-        return orderService.findAll();
+    @GetMapping("/{id}")
+    Order findById(@PathVariable Integer id) {
+        return orderService.findById(id);
     }
 }

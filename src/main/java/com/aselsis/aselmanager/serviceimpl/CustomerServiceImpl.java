@@ -64,4 +64,13 @@ public class CustomerServiceImpl implements CustomerService {
     public void deleteById(Integer id) {
         customerRepository.deleteById(id);
     }
+
+    @Override
+    public Customer findById(Integer id){
+
+      Optional<Customer>opCus=customerRepository.findById(id);
+
+        return opCus.get();
+    }
+
 }
