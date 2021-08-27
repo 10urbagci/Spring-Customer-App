@@ -1,4 +1,5 @@
 package com.aselsis.aselmanager.controller;
+
 import com.aselsis.aselmanager.dto.SaveCustomerDto;
 import com.aselsis.aselmanager.dto.UpdateCustomerDto;
 import com.aselsis.aselmanager.model.Customer;
@@ -21,7 +22,6 @@ public class CustomerController {
         this.customerService = customerService;
 
     }
-
     @GetMapping("/all")
     public List<Customer> findAll() {
         return customerService.findAll();

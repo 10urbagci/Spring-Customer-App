@@ -8,6 +8,8 @@ public class UpdateOrderLineDto {
 
     private Integer quantity;
 
+    private String item;
+
 
     private Double cost;
 }

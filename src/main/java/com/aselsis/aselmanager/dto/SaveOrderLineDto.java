@@ -9,5 +9,7 @@ public class SaveOrderLineDto {
 
     private Integer quantity;
 
+    private String item;
+
     private Double cost;
 }

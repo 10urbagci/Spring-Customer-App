@@ -59,6 +59,8 @@ public class OrderLineServiceImpl implements OrderLineService {
 
         orderLine.setQuantity(updateOrderLineDto.getQuantity());
 
+        orderLine.setItem(updateOrderLineDto.getItem());
+
         orderLine = orderLineRepository.save(orderLine);
 
         return orderLine;
