@@ -54,6 +54,8 @@ public class OrderServiceImpl implements OrderService {
         order.setCustomer(customerOptional.get());
         order.setTotalPrice(totalPrice);
 
+        order.setAddress(saveOrderRequestDto.getAddress());
+
         order = orderRepository.save(order);
 
         return order;
