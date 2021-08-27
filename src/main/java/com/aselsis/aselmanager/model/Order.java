@@ -2,6 +2,8 @@ package com.aselsis.aselmanager.model;
 
 import lombok.Data;
 import javax.persistence.*;
+import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 
 @Data
@@ -14,13 +16,15 @@ public class Order {
     private Integer id;
 
 
-   @ManyToOne
+    @Embedded
     private Address address;
 
     @ManyToOne
     private Customer customer;
 
     private Double totalPrice;
+
+    private LocalDateTime dateTime;
 
     @OneToMany
     private List<OrderLine> orderLineList;

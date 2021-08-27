@@ -13,7 +13,7 @@ public class OrderLine {
 
     private Integer quantity;
 
-    private String item;
+
 
     @ManyToOne
     private Product product;

@@ -3,29 +3,18 @@ package com.aselsis.aselmanager.model;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.Embeddable;
 
 @Data
-@Entity
-
+@Embeddable
 public class Address {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    private Integer id;
+    private String houseNo;
 
-    private Integer houseNo;
+    private String province;
 
-    private String Province;
+    private String district;
 
-    private String District;
+    private String neighborhood;
 
-    private String Neighborhood;
-
-    public Address(){
-
-    }
 }
