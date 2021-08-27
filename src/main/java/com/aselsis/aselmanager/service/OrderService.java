@@ -10,7 +10,7 @@ import java.util.List;
 
 public interface OrderService {
 
-    Order saveOrder(SaveOrderRequestDto saveOrderRequestDto);
+    Order saveOrder(Order order);
 
     List<Order> findAll();
 

@@ -32,9 +32,9 @@ public class OrderServiceImpl implements OrderService {
 
 
     @Override
-    public Order saveOrder(SaveOrderRequestDto saveOrderRequestDto) {
+    public Order saveOrder(Order order) {
 
-        Order order = new Order();
+       /* Order order = new Order();
 
         List<OrderLine> orderLineList = orderLineRepository.findByIdIn(saveOrderRequestDto.getOrderLineIdList());
 
@@ -55,7 +55,7 @@ public class OrderServiceImpl implements OrderService {
         order.setTotalPrice(totalPrice);
 
         order.setAddress(saveOrderRequestDto.getAddress());
-
+*/
         order = orderRepository.save(order);
 
         return order;

@@ -28,8 +28,8 @@ public class OrderController {
     }
 
     @PostMapping("/save")
-    public Order saveOrder(@RequestBody SaveOrderRequestDto saveOrderRequestDto) {
-        return orderService.saveOrder(saveOrderRequestDto);
+    public Order saveOrder(@RequestBody Order order) {
+        return orderService.saveOrder(order);
     }
 
     @PutMapping("/{id}")
