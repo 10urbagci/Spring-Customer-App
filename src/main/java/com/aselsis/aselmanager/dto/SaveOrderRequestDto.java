@@ -1,6 +1,7 @@
 package com.aselsis.aselmanager.dto;
 
 
+import com.aselsis.aselmanager.model.Address;
 import lombok.Data;
 
 import java.time.LocalDateTime;
@@ -14,5 +15,7 @@ public class SaveOrderRequestDto {
     private Integer customerId;
 
     private LocalDateTime dateTime;
+
+    private Address address;
 
 }
