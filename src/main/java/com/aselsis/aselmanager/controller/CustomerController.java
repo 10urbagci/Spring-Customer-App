@@ -22,6 +22,7 @@ public class CustomerController {
         this.customerService = customerService;
 
     }
+
     @GetMapping("/all")
     public List<Customer> findAll() {
         return customerService.findAll();

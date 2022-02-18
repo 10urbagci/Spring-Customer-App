@@ -26,7 +26,7 @@ public class Order {
 
     private LocalDateTime dateTime;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     private List<OrderLine> orderLineList;
 
     public Order(){
